@@ -117,13 +117,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "tls",
+      "feat",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "tls",
+      "feat",
       "kebab-case"
     ],
     "use-input-property-decorator": true,

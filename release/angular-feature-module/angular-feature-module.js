@@ -12,7 +12,7 @@ class HeaderComponent {
 }
 HeaderComponent.decorators = [
     { type: Component, args: [{
-                selector: 'header',
+                selector: 'feat-header',
                 template: `
       <h1>
       	<ng-content></ng-content>
@@ -30,6 +30,35 @@ HeaderComponent.decorators = [
  */
 HeaderComponent.ctorParameters = () => [];
 
+class ParagraphComponent {
+    constructor() {
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+    }
+}
+ParagraphComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'feat-paragraph',
+                template: `
+      <p>
+      	<ng-content></ng-content>
+      </p>
+    `,
+                styles: [`
+      p{
+      	color: lime;
+      }
+    `]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ParagraphComponent.ctorParameters = () => [];
+
 class FeatureModule {
 }
 FeatureModule.decorators = [
@@ -37,8 +66,8 @@ FeatureModule.decorators = [
                 imports: [
                     CommonModule
                 ],
-                declarations: [HeaderComponent],
-                exports: [HeaderComponent]
+                declarations: [HeaderComponent, ParagraphComponent],
+                exports: [HeaderComponent, ParagraphComponent]
             },] },
 ];
 /**
@@ -50,5 +79,5 @@ FeatureModule.ctorParameters = () => [];
  * Generated bundle index. Do not edit.
  */
 
-export { FeatureModule, HeaderComponent as ɵa };
+export { FeatureModule, HeaderComponent as ɵa, ParagraphComponent as ɵb };
 //# sourceMappingURL=angular-feature-module.js.map

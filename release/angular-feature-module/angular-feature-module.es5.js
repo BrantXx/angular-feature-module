@@ -12,7 +12,7 @@ var HeaderComponent = (function () {
 }());
 HeaderComponent.decorators = [
     { type: Component, args: [{
-                selector: 'header',
+                selector: 'feat-header',
                 template: "\n      <h1>\n      \t<ng-content></ng-content>\n      </h1>\n    ",
                 styles: ["\n      h1{\n      \tcolor: red;\n      }\n    "]
             },] },
@@ -21,6 +21,27 @@ HeaderComponent.decorators = [
  * @nocollapse
  */
 HeaderComponent.ctorParameters = function () { return []; };
+var ParagraphComponent = (function () {
+    function ParagraphComponent() {
+    }
+    /**
+     * @return {?}
+     */
+    ParagraphComponent.prototype.ngOnInit = function () {
+    };
+    return ParagraphComponent;
+}());
+ParagraphComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'feat-paragraph',
+                template: "\n      <p>\n      \t<ng-content></ng-content>\n      </p>\n    ",
+                styles: ["\n      p{\n      \tcolor: lime;\n      }\n    "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ParagraphComponent.ctorParameters = function () { return []; };
 var FeatureModule = (function () {
     function FeatureModule() {
     }
@@ -31,8 +52,8 @@ FeatureModule.decorators = [
                 imports: [
                     CommonModule
                 ],
-                declarations: [HeaderComponent],
-                exports: [HeaderComponent]
+                declarations: [HeaderComponent, ParagraphComponent],
+                exports: [HeaderComponent, ParagraphComponent]
             },] },
 ];
 /**
@@ -42,5 +63,5 @@ FeatureModule.ctorParameters = function () { return []; };
 /**
  * Generated bundle index. Do not edit.
  */
-export { FeatureModule, HeaderComponent as ɵa };
+export { FeatureModule, HeaderComponent as ɵa, ParagraphComponent as ɵb };
 //# sourceMappingURL=angular-feature-module.es5.js.map
